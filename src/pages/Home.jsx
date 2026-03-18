@@ -66,7 +66,7 @@ const Home = () => {
             <span className={styles.sectionLabel} style={{color: 'var(--color-primary)'}}>✨ OUR STORY</span>
             <h2 className="serif-heading">Crafting <span className="text-primary">Flavor</span><br/>Since 2000</h2>
             <p>
-              Founded in the heart of Delhi's Wazirpur Industrial Area, Richie Spices Company emerged from a singular vision: to bring the authentic flavors of India to the global table through modern processing and uncompromising quality.
+              Richie Spices Company emerged from a singular vision: to bring the authentic flavors of India to the global table through modern processing and uncompromising quality.
             </p>
             <p>
               Our state-of-the-art facility combines traditional knowledge with cold-grinding technology, ensuring every grain retains its essential oils, aroma, and potency.

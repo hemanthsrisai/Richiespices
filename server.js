@@ -5,8 +5,8 @@ import { Resend } from 'resend';
 const app = express();
 const port = 3001;
 
-// Use the API key provided by the user
-const resend = new Resend('re_YZizcdkA_DFGzkZh3ZELySFB5PK1RgQRV');
+// For local development, use an environment variable (or a '.env' file)
+const resend = new Resend(process.env.RESEND_API_KEY || 'add-your-key-in-env-file');
 
 // Middleware
 app.use(cors());

@@ -10,9 +10,9 @@ export default async function handler(request, response) {
     // Dynamically import resend to avoid issues in some serverless environments
     const { Resend } = await import('resend');
     
-    // We will use the environment variable instead of hardcoding
-    // Vercel handles this securely
-    const resend = new Resend(process.env.RESEND_API_KEY || 're_YZizcdkA_DFGzkZh3ZELySFB5PK1RgQRV');
+    // We will use the environment variable exclusively to ensure security
+    // Vercel handles this securely via project settings
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     const data = await resend.emails.send({
       from: 'onboarding@resend.dev',

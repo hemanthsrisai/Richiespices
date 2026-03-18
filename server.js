@@ -19,7 +19,7 @@ app.post('/api/send-email', async (req, res) => {
   try {
     const data = await resend.emails.send({
       from: 'onboarding@resend.dev',
-      to: 'chatgptonly82@gmail.com', // User's requested target email
+      to: 'info@richiespices.com', // Official client email
       subject: `New Inquiry from ${name}: ${subject}`,
       html: `
         <h3>New Website Inquiry</h3>

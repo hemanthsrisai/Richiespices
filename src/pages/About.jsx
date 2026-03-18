@@ -7,7 +7,7 @@ const About = () => {
     <div className={styles.aboutPage}>
       <PageHeader 
         title="About Us" 
-        subtitle="Discover the story behind Richie Spices Pvt. Ltd."
+        subtitle="Discover the story behind Richie Spices Company"
         breadcrumb="HOME / ABOUT" 
       />
 
@@ -18,7 +18,7 @@ const About = () => {
             <span className={styles.label}>OUR STORY</span>
             <h2 className="serif-heading">Roots in Tradition.<br/>A Future in <span className="text-primary">Flavor.</span></h2>
             <p>
-              Founded in 2000 in the bustling commercial hub of Wazirpur Industrial Area, Delhi, India, <strong>Richie Spices Pvt. Ltd.</strong> emerged with a singular goal: to deliver the unadulterated, authentic taste of Indian spices to the world.
+              Founded in 2000 in the bustling commercial hub of Wazirpur Industrial Area, Delhi, India, <strong>Richie Spices Company</strong> emerged with a singular goal: to deliver the unadulterated, authentic taste of Indian spices to the world.
             </p>
             <p>
               We are a premier spice manufacturing and packaging company specializing in whole spices, ground spices, and expertly crafted blended masalas. With a strong footprint in the FMCG sector, we cater to both everyday consumers seeking culinary perfection and institutional buyers who demand consistent bulk supply for the HORECA and food manufacturing industries.

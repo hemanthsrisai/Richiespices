@@ -11,7 +11,7 @@ const Footer = () => {
           <div className={styles.brandCol}>
             <div className={styles.logo}>
               <h2>Richie Spices</h2>
-              <span>Pvt. Ltd.</span>
+              <span>COMPANY</span>
             </div>
             <p className={styles.desc}>
               Delivering the authentic flavors of India globally. Premium whole, powder, and blended spices for consumers and businesses alike.
@@ -67,7 +67,7 @@ const Footer = () => {
         </div>
 
         <div className={styles.footerBottom}>
-          <p>&copy; {new Date().getFullYear()} Richie Spices Pvt. Ltd. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Richie Spices Company. All Rights Reserved.</p>
           <div className={styles.footerLegal}>
             <Link to="#">Privacy Policy</Link>
             <Link to="#">Terms of Service</Link>

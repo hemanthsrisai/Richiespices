@@ -17,8 +17,8 @@ const Contact = () => {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      // Send the data to our local backend proxy server
-      const response = await fetch('http://localhost:3001/api/send-email', {
+      // Send the data to our Vercel serverless function
+      const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4>Address</h4>
-                  <p>Richie Spices Pvt. Ltd.<br/>Wazirpur Industrial Area<br/>Delhi, India</p>
+                  <p>Richie Spices Company<br/>Wazirpur Industrial Area<br/>Delhi, India</p>
                 </div>
               </div>
 

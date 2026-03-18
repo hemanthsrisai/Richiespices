@@ -10,7 +10,7 @@ const Home = () => {
         <div className={styles.heroOverlay}></div>
         <div className={`container ${styles.heroContainer}`}>
           <div className={styles.heroContent}>
-            <span className={`animate-fade-in-up ${styles.heroSubtitle}`}>EST. 2022 — DELHI, INDIA</span>
+            <span className={`animate-fade-in-up ${styles.heroSubtitle}`}>EST. 2000 — DELHI, INDIA</span>
             <h1 className="serif-heading animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               From the Soil of India<br />to the <span className="text-saffron">Global Table</span>
             </h1>
@@ -64,7 +64,7 @@ const Home = () => {
         <div className={`container ${styles.aboutGrid}`}>
           <div className={styles.aboutContent}>
             <span className={styles.sectionLabel} style={{color: 'var(--color-primary)'}}>✨ OUR STORY</span>
-            <h2 className="serif-heading">Crafting <span className="text-primary">Flavor</span><br/>Since 2022</h2>
+            <h2 className="serif-heading">Crafting <span className="text-primary">Flavor</span><br/>Since 2000</h2>
             <p>
               Founded in the heart of Delhi's Wazirpur Industrial Area, Richie Spices Pvt. Ltd. emerged from a singular vision: to bring the authentic flavors of India to the global table through modern processing and uncompromising quality.
             </p>

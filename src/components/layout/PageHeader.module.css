@@ -1,0 +1,44 @@
+.pageHeader {
+  position: relative;
+  background-color: var(--color-earth-brown);
+  background: linear-gradient(rgba(102, 0, 0, 0.8), rgba(92, 64, 51, 0.9)); /* default fallback */
+  padding: 120px 0 80px;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(var(--color-saffron) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  font-size: 0.875rem;
+  color: var(--color-saffron);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+}
+
+.content h1 {
+  color: var(--color-white);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.9);
+}

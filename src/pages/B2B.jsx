@@ -1,5 +1,5 @@
 import PageHeader from '../components/layout/PageHeader';
-import { Building2, ChefHat, Truck, ShoppingCart, CheckCircle2 } from 'lucide-react';
+import { Building2, ChefHat, ShoppingCart, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import styles from './B2B.module.css';
 
@@ -35,10 +35,6 @@ const B2B = () => {
           </div>
           <div className={styles.introImageWrapper}>
             <img src="/media/bulk packing.png" alt="Bulk Spices" className={styles.introImage} />
-            <div className={styles.floatingCard}>
-              <h4>Supply Capacity</h4>
-              <p>Up to 500 Tons/Month</p>
-            </div>
           </div>
         </div>
       </section>
@@ -61,11 +57,6 @@ const B2B = () => {
               <Building2 size={40} className={styles.industryIcon} />
               <h3>Food Manufacturing</h3>
               <p>RTE meals, snack producers, and bakery industries. We supply standardized bulk raw materials in 30kg and 50kg sacks.</p>
-            </div>
-            <div className={styles.industryCard}>
-              <Truck size={40} className={styles.industryIcon} />
-              <h3>Wholesale Distributors</h3>
-              <p>Reliable supply chain support for distributors seeking high-margin, premium branded or white-label spices for their networks.</p>
             </div>
             <div className={styles.industryCard}>
               <ShoppingCart size={40} className={styles.industryIcon} />

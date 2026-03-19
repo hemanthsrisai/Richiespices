@@ -25,7 +25,7 @@ const B2B2C = () => {
             <p>
               By partnering with Richie Spices, you gain access to a portfolio of high-quality, 
               attractively packaged spices that promise high shelf turnover and excellent margins. 
-              We take care of the heavy lifting—sourcing, processing, and packaging—so you can focus on distribution and sales.
+              We take care of the heavy lifting—sourcing, processing, and packaging—so you can focus on distribution.
             </p>
           </div>
           <div className={styles.modelStats}>
@@ -61,8 +61,8 @@ const B2B2C = () => {
               <div className={styles.ecomLogos}>
                 <div className={styles.ecomTag}><Store size={20} /> Amazon</div>
                 <div className={styles.ecomTag}><ShoppingBag size={20} /> Flipkart</div>
-                <div className={styles.ecomTag}><Store size={20} /> Shopify Stores</div>
-                <div className={styles.ecomTag}><ShoppingBag size={20} /> Local Q-Commerce</div>
+                <div className={styles.ecomTag}><Store size={20} /> Swiggy Instamart</div>
+                <div className={styles.ecomTag}><ShoppingBag size={20} /> Jio Mart</div>
               </div>
             </div>
             <img src="/media/ecomspi.png" alt="Available on Amazon, Flipkart, Shopify" className={styles.ecomImagePlaceholder} style={{objectFit: 'contain', backgroundColor: 'var(--color-paper)'}} />

@@ -41,7 +41,6 @@ const Navbar = () => {
       <div className={`container ${styles.navContainer}`}>
         <Link to="/" className={styles.logo}>
           <h1 className="serif-heading">Richie Spices</h1>
-          <span>COMPANY</span>
         </Link>
 
         {/* Desktop Navigation */}

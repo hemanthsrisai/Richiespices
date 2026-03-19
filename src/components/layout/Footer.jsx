@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
 import styles from './Footer.module.css';
 
 const Footer = () => {
@@ -11,16 +11,14 @@ const Footer = () => {
           <div className={styles.brandCol}>
             <div className={styles.logo}>
               <h2>Richie Spices</h2>
-              <span>COMPANY</span>
             </div>
             <p className={styles.desc}>
               Delivering the authentic flavors of India globally. Premium whole, powder, and blended spices for consumers and businesses alike.
             </p>
             <div className={styles.socials}>
-              <a href="#" aria-label="Facebook"><Facebook size={20} /></a>
-              <a href="#" aria-label="Instagram"><Instagram size={20} /></a>
-              <a href="#" aria-label="LinkedIn"><Linkedin size={20} /></a>
-              <a href="#" aria-label="Twitter"><Twitter size={20} /></a>
+              <a href="https://www.facebook.com/richieplusfoods/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><Facebook size={20} /></a>
+              <a href="https://www.instagram.com/richieplusfoods?igsh=MXA3MDlqZTExMW0wZA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram size={20} /></a>
+              <a href="https://www.linkedin.com/company/richie-spices-private-limited/about/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin size={20} /></a>
             </div>
           </div>
 
@@ -52,7 +50,7 @@ const Footer = () => {
             <ul className={styles.contactInfo}>
               <li>
                 <MapPin size={20} className={styles.contactIcon} />
-                <span>Wazirpur Industrial Area, Delhi, India</span>
+                <span>A-98/6, Wazirpur Industrial Area, Near Shalimar Bagh Metro Station, Delhi- 110052</span>
               </li>
               <li>
                 <Phone size={20} className={styles.contactIcon} />

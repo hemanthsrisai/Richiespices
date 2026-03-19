@@ -10,10 +10,10 @@ const Home = () => {
         <div className={styles.heroOverlay}></div>
         <div className={`container ${styles.heroContainer}`}>
           <div className={styles.heroContent}>
-            <span className={`animate-fade-in-up ${styles.heroSubtitle}`}>EST. 2000 — DELHI, INDIA</span>
             <h1 className="serif-heading animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               From the Soil of India<br />to the <span className="text-saffron">Global Table</span>
             </h1>
+            <p className={`animate-fade-in-up ${styles.heroSubtitle}`} style={{ animationDelay: '0.3s', fontSize: '1.4rem', fontWeight: '500', marginTop: '0.5rem' }}>Your trusted partner for high-quality spices</p>
             <p className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               The Architecture of Flavor. Premium Sourcing. Modern<br />Processing. Global Supply.
             </p>
@@ -48,7 +48,7 @@ const Home = () => {
             <div className={styles.statCard}>
               <Globe size={32} className={styles.statIcon} style={{color: 'var(--color-saffron)'}} />
               <h3 className="serif-heading">Modern Manufacturing</h3>
-              <p>State-of-the-art facility in Wazirpur Industrial Hub.</p>
+              <p>State of the art facility.</p>
             </div>
             <div className={styles.statCard}>
               <Globe size={32} className={styles.statIcon} style={{color: 'var(--color-primary-light)'}} />

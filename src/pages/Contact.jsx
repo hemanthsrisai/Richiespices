@@ -69,7 +69,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4>Address</h4>
-                  <p>Richie Spices Company<br/>Wazirpur Industrial Area<br/>Delhi, India</p>
+                  <p>Richie Spices<br/>A-98/6, Wazirpur Industrial Area<br/>Near Shalimar Bagh Metro Station<br/>Delhi- 110052</p>
                 </div>
               </div>
 

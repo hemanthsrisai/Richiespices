@@ -15,7 +15,7 @@ const Home = () => {
             </h1>
             <p className={`animate-fade-in-up ${styles.heroSubtitle}`} style={{ animationDelay: '0.3s', fontSize: '1.4rem', fontWeight: '500', marginTop: '0.5rem' }}>Your trusted partner for high-quality spices</p>
             <p className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              The Architecture of Flavor. Premium Sourcing. Modern Processing. Global Supply.
+              Crafting flavor through premium sourcing, refined processing, and a seamless global supply.
             </p>
             <div className={`animate-fade-in-up ${styles.heroCta}`} style={{ animationDelay: '0.6s' }}>
               <Link to="/products" className="btn btn-primary">EXPLORE PRODUCTS <ArrowRight size={16} style={{marginLeft: '8px'}} /></Link>

@@ -15,7 +15,7 @@ const Home = () => {
             </h1>
             <p className={`animate-fade-in-up ${styles.heroSubtitle}`} style={{ animationDelay: '0.3s', fontSize: '1.4rem', fontWeight: '500', marginTop: '0.5rem' }}>Your trusted partner for high-quality spices</p>
             <p className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              The Architecture of Flavor. Premium Sourcing. Modern<br />Processing. Global Supply.
+              The Architecture of Flavor. Premium Sourcing. Modern Processing. Global Supply.
             </p>
             <div className={`animate-fade-in-up ${styles.heroCta}`} style={{ animationDelay: '0.6s' }}>
               <Link to="/products" className="btn btn-primary">EXPLORE PRODUCTS <ArrowRight size={16} style={{marginLeft: '8px'}} /></Link>
@@ -78,6 +78,33 @@ const Home = () => {
             <div className={styles.imageCaption}>
                Wazirpur Industrial Hub — Delhi, India
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certificates Banner */}
+      <section className={`section ${styles.certificatesSection}`}>
+        <div className="container">
+          <div className={styles.sectionHeaderLeft}>
+            <span className={styles.sectionLabel}>QUALITY ASSURANCE</span>
+            <h2 className="serif-heading">Our <span className="text-primary">Certifications</span></h2>
+            <p>Committed to the highest standards of quality, safety, and purity.</p>
+          </div>
+          <div className={styles.certGrid}>
+            {[
+              { name: 'ISO Certified', image: '/media/certificates/iso certificate.png' },
+              { name: 'HACCP', image: '/media/certificates/haccp.png' },
+              { name: 'Cool Grind', image: '/media/certificates/cool grind.jpg' },
+              { name: 'High Essential Oils', image: '/media/certificates/high essential oils.jpg' },
+              { name: 'Sterilized', image: '/media/certificates/sterilized.jpg' },
+              { name: 'Zero Preservatives', image: '/media/certificates/zero preservatives.jpg' },
+              { name: 'Zero Salmonella', image: '/media/certificates/zero salmonela.png' },
+            ].map((cert, idx) => (
+              <div key={idx} className={styles.certCard}>
+                <img src={cert.image} alt={cert.name} className={styles.certImage} />
+                <span className={styles.certName}>{cert.name}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -7,21 +7,34 @@ import styles from './Products.module.css';
 // Using high-quality Unsplash images for products
 const ALL_PRODUCTS = [
   // Whole Spices
-  { id: 1, name: 'Cumin Seeds (Jeera)', category: 'Whole Spices', desc: 'Premium sorted cumin seeds with rich aroma.', packSizes: ['50g', '100g', '500g', '1kg', '50kg Bulk'], image: '/media/cumin seeds.png' },
-  { id: 2, name: 'Green Cardamom', category: 'Whole Spices', desc: 'Handpicked aromatic cardamom pods.', packSizes: ['50g', '100g', '250g', '1kg'], image: '/media/green cardamom.png' },
-  { id: 3, name: 'Black Pepper', category: 'Whole Spices', desc: 'Bold, pungent whole black peppercorns.', packSizes: ['100g', '500g', '1kg', '30kg Bulk'], image: '/media/black pepper powder.png' },
+  { id: 1, name: 'Cumin Seeds (Jeera)', category: 'Whole Spices', desc: 'Premium sorted cumin seeds with rich aroma.', packSizes: ['50g', '100g', '500g', '1kg', '50kg Bulk'], image: '/media/products/Jeera.jpg' },
+  { id: 2, name: 'Green Cardamom (Choti Elaichi)', category: 'Whole Spices', desc: 'Handpicked aromatic cardamom pods.', packSizes: ['50g', '100g', '250g', '1kg'], image: '/media/products/Choti Elaichi.jpg' },
+  { id: 3, name: 'Black Pepper', category: 'Whole Spices', desc: 'Bold, pungent whole black peppercorns.', packSizes: ['100g', '500g', '1kg', '30kg Bulk'], image: '/media/products/Black Pepper.jpg' },
+  { id: 4, name: 'Cloves (Laung)', category: 'Whole Spices', desc: 'Premium quality whole cloves with intense aroma.', packSizes: ['50g', '100g', '250g', '1kg'], image: '/media/products/Laung.jpg' },
+  { id: 5, name: 'Ajwain', category: 'Whole Spices', desc: 'Aromatic carom seeds for authentic Indian cooking.', packSizes: ['50g', '100g', '500g'], image: '/media/products/Ajwain.jpg' },
+  { id: 6, name: 'Fennel Seeds (Sauf)', category: 'Whole Spices', desc: 'Sweet, aromatic fennel seeds.', packSizes: ['50g', '100g', '500g', '1kg'], image: '/media/products/Sauf.jpg' },
+  { id: 18, name: 'Mustard Seeds (Sarso)', category: 'Whole Spices', desc: 'Premium quality mustard seeds.', packSizes: ['100g', '500g', '1kg'], image: '/media/products/Sarso.jpg' },
+  { id: 19, name: 'Fenugreek Seeds (Methi)', category: 'Whole Spices', desc: 'Aromatic fenugreek for rich flavor.', packSizes: ['100g', '500g', '1kg'], image: '/media/products/Methi.jpg' },
+  { id: 20, name: 'Poppy Seeds (Posta Dana)', category: 'Whole Spices', desc: 'White poppy seeds for gravies and sweets.', packSizes: ['50g', '100g', '250g'], image: '/media/products/Posta Dana.jpg' },
+  { id: 21, name: 'Nigella Seeds (Mangraila)', category: 'Whole Spices', desc: 'Black cumin seeds with earthy flavor.', packSizes: ['50g', '100g', '500g'], image: '/media/products/Mangraila.jpg' },
   
   // Powder Spices
-  { id: 7, name: 'Turmeric Powder', category: 'Powder Spices', desc: 'Bright yellow, high-curcumin turmeric powder.', packSizes: ['100g', '200g', '500g', '1kg', '50kg Bulk'], image: '/media/termaric powder.png' },
-  { id: 8, name: 'Red Chilli Powder', category: 'Powder Spices', desc: 'Vibrant color and perfect heat.', packSizes: ['100g', '200g', '500g', '1kg', '30kg Bulk'], image: '/media/red chilli powder.png' },
-  { id: 9, name: 'Coriander Powder', category: 'Powder Spices', desc: 'Freshly ground coriander seeds.', packSizes: ['100g', '200g', '500g', '1kg'], image: '/media/coriander powder.png' },
+  { id: 7, name: 'Turmeric Powder (Haldi)', category: 'Powder Spices', desc: 'Bright yellow, high-curcumin turmeric powder.', packSizes: ['100g', '200g', '500g', '1kg', '50kg Bulk'], image: '/media/products/Haldi Powder.png' },
+  { id: 8, name: 'Red Chilli Powder', category: 'Powder Spices', desc: 'Vibrant color and perfect heat.', packSizes: ['100g', '200g', '500g', '1kg', '30kg Bulk'], image: '/media/products/Red Mirch Powder.jpeg' },
+  { id: 9, name: 'Coriander Powder (Dhaniya)', category: 'Powder Spices', desc: 'Freshly ground coriander seeds.', packSizes: ['100g', '200g', '500g', '1kg'], image: '/media/products/Dhaniya Powder.jpeg' },
+  { id: 10, name: 'Cumin Powder (Jeera)', category: 'Powder Spices', desc: 'Finely ground cumin powder with intense aroma.', packSizes: ['100g', '200g', '500g', '1kg'], image: '/media/products/Jeera Powder.png' },
+  { id: 22, name: 'Black Pepper Powder', category: 'Powder Spices', desc: 'Freshly ground black pepper for bold flavor.', packSizes: ['50g', '100g', '500g'], image: '/media/products/Black pepperPowder.png' },
   
   // Blended Spices
-  { id: 11, name: 'Garam Masala', category: 'Blended Spices', desc: 'Authentic blend of traditional Indian spices.', packSizes: ['50g', '100g', '500g'], image: '/media/gharam masala.png' },
-  { id: 12, name: 'Biryani Masala', category: 'Blended Spices', desc: 'Perfect mix for aromatic and flavorful biryani.', packSizes: ['50g', '100g', 'Retail Sachets'], image: '/media/biryani masala.png' },
+  { id: 11, name: 'Garam Masala', category: 'Blended Spices', desc: 'Authentic blend of traditional Indian spices.', packSizes: ['50g', '100g', '500g'], image: '/media/products/Garam Masala.jpg' },
+  { id: 12, name: 'Biryani Masala', category: 'Blended Spices', desc: 'Perfect mix for aromatic and flavorful biryani.', packSizes: ['50g', '100g', 'Retail Sachets'], image: '/media/products/Biryani Masala.png' },
+  { id: 13, name: 'Chicken Masala', category: 'Blended Spices', desc: 'Aromatic blend for delicious chicken dishes.', packSizes: ['50g', '100g', '500g'], image: '/media/products/Chicken Masala.png' },
+  { id: 14, name: 'Meat Masala', category: 'Blended Spices', desc: 'Rich blend for flavorful meat preparations.', packSizes: ['50g', '100g', '500g'], image: '/media/products/Meat Masala.png' },
   
   // Oleoresins & Oils
   { id: 16, name: 'Cumin Oil', category: 'Oleoresins & Oils', desc: 'Pure extracted cumin essential oil.', packSizes: ['100ml', '500ml', '1L', 'Bulk Drums'], image: '/media/cumin olis.png' },
+  { id: 17, name: 'Cardamom Oil', category: 'Oleoresins & Oils', desc: 'Premium cardamom essential oil with rich aroma.', packSizes: ['100ml', '500ml', '1L', 'Bulk Drums'], image: '/media/products/Choti Elaichi.jpg' },
+  { id: 23, name: 'Black Pepper Oil', category: 'Oleoresins & Oils', desc: 'Pure black pepper oleoresin extract.', packSizes: ['100ml', '500ml', '1L', 'Bulk Drums'], image: '/media/products/Black Pepper.jpg' },
 ];
 
 const CATEGORIES = ['All', 'Whole Spices', 'Powder Spices', 'Blended Spices', 'Oleoresins & Oils'];

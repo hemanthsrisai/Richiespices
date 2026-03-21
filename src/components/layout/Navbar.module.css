@@ -28,14 +28,20 @@
 
 .logo {
   display: flex;
-  align-items: baseline;
-  gap: 8px;
+  align-items: center;
+  gap: 10px;
   color: var(--color-primary);
+}
+
+.logoImage {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
 }
 
 .logo h1 {
   font-family: var(--font-heading-serif);
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin: 0;
   line-height: 1;
   color: inherit;

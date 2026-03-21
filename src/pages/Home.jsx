@@ -145,6 +145,35 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Our Clients Section */}
+      <section className={`section ${styles.clientsSection}`}>
+        <div className="container">
+          <div className={styles.sectionHeaderLeft} style={{textAlign: 'center', maxWidth: '900px', margin: '0 auto var(--spacing-xl)'}}>
+            <span className={styles.sectionLabel}>OUR CLIENTS</span>
+            <h2 className="serif-heading">Industries & Brands We <span className="text-primary">Serve</span></h2>
+            <p style={{fontSize: '1.1rem'}}>Empowering the brands we serve with consistent quality, trusted sourcing, and flavors that inspire excellence.</p>
+          </div>
+          <div className={styles.clientsTrack}>
+            <div className={styles.clientsSlide}>
+              {[
+                { name: 'Baking', image: '/media/clients/baking.jpg' },
+                { name: 'Cloud Kitchen', image: '/media/clients/cloud kitchen.jpg' },
+                { name: 'Food Processing Industries', image: '/media/clients/food processing industries.jpg' },
+                { name: 'Oleoresins Companies', image: '/media/clients/oleoresins companies.jpg' },
+                { name: 'Quick Service Restaurants', image: '/media/clients/quick service restaurents.jpg' },
+                { name: 'Restaurant Chains', image: '/media/clients/restaurent chains.jpg' },
+                { name: 'Tea Companies', image: '/media/clients/tea companies.jpg' },
+              ].map((client, idx) => (
+                <div key={idx} className={styles.clientCard}>
+                  <img src={client.image} alt={client.name} className={styles.clientImage} />
+                  <span className={styles.clientName}>{client.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className={styles.ctaSection}>
         <div className={`container ${styles.ctaContainer}`}>

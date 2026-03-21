@@ -391,55 +391,65 @@
 /* Our Clients Section */
 .clientsSection {
   background-color: var(--color-cream);
+  overflow: hidden;
 }
 
 .clientsTrack {
-  overflow-x: auto;
-  padding-bottom: var(--spacing-md);
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.clientsTrack::-webkit-scrollbar {
-  display: none;
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
 
 .clientsSlide {
   display: flex;
-  gap: var(--spacing-lg);
-  justify-content: center;
-  flex-wrap: wrap;
+  gap: var(--spacing-xl);
+  animation: scrollClients 25s linear infinite;
+  width: max-content;
+}
+
+.clientsSlide:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollClients {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .clientCard {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background: var(--color-white);
-  padding: var(--spacing-lg);
+  padding: var(--spacing-lg) var(--spacing-xl);
   border-radius: var(--radius-md, 12px);
   border: 1px solid rgba(0, 0, 0, 0.06);
-  min-width: 160px;
-  max-width: 180px;
+  min-width: 200px;
   flex-shrink: 0;
   transition: transform var(--transition-medium), box-shadow var(--transition-medium);
 }
 
 .clientCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
 
 .clientImage {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
   margin-bottom: var(--spacing-md);
   border-radius: var(--radius-sm);
 }
 
 .clientName {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: var(--color-primary-dark);
   text-align: center;

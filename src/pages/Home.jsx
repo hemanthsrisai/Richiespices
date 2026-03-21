@@ -156,10 +156,17 @@ const Home = () => {
           <div className={styles.clientsTrack}>
             <div className={styles.clientsSlide}>
               {[
-                { name: 'Baking', image: '/media/clients/baking.jpg' },
-                { name: 'Cloud Kitchen', image: '/media/clients/cloud kitchen.jpg' },
+                { name: 'Baking Industries', image: '/media/clients/baking.jpg' },
+                { name: 'Cloud Kitchens', image: '/media/clients/cloud kitchen.jpg' },
                 { name: 'Food Processing Industries', image: '/media/clients/food processing industries.jpg' },
-                { name: 'Oleoresins Companies', image: '/media/clients/oleoresins companies.jpg' },
+                { name: 'Oleoresin Companies', image: '/media/clients/oleoresins companies.jpg' },
+                { name: 'Quick Service Restaurants', image: '/media/clients/quick service restaurents.jpg' },
+                { name: 'Restaurant Chains', image: '/media/clients/restaurent chains.jpg' },
+                { name: 'Tea Companies', image: '/media/clients/tea companies.jpg' },
+                { name: 'Baking Industries', image: '/media/clients/baking.jpg' },
+                { name: 'Cloud Kitchens', image: '/media/clients/cloud kitchen.jpg' },
+                { name: 'Food Processing Industries', image: '/media/clients/food processing industries.jpg' },
+                { name: 'Oleoresin Companies', image: '/media/clients/oleoresins companies.jpg' },
                 { name: 'Quick Service Restaurants', image: '/media/clients/quick service restaurents.jpg' },
                 { name: 'Restaurant Chains', image: '/media/clients/restaurent chains.jpg' },
                 { name: 'Tea Companies', image: '/media/clients/tea companies.jpg' },

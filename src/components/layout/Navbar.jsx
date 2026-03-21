@@ -40,7 +40,7 @@ const Navbar = () => {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''} ${!needsTransparentNav && !isScrolled ? styles.solidDefault : ''}`}>
       <div className={`container ${styles.navContainer}`}>
         <Link to="/" className={styles.logo}>
-          <img src="/media/mainrich.png" alt="Richie Spices Logo" className={styles.logoImage} />
+          <img src="/media/richiespices-logo.png" alt="Richie Spices Logo" className={styles.logoImage} />
           <h1 className="serif-heading">Richie Spices</h1>
         </Link>
 

@@ -87,26 +87,24 @@ const Home = () => {
         <div className="container">
           <div className={styles.sectionHeaderLeft} style={{textAlign: 'center', maxWidth: '900px', margin: '0 auto var(--spacing-xl)'}}>
             <span className={styles.sectionLabel}>QUALITY ASSURANCE</span>
-            <h2 className="serif-heading">State of Art <span className="text-primary">Manufacturing</span></h2>
+            <h2 className="serif-heading">Our <span className="text-primary">Certifications</span></h2>
             <p>Committed to the highest standards of quality, safety, and purity.</p>
           </div>
           <div className={styles.certTrack}>
             <div className={styles.certSlide}>
               {[
-                { name: 'ISO Certified', image: '/media/certificates/iso certificate.png' },
-                { name: 'HACCP', image: '/media/certificates/haccp.png' },
-                { name: 'Cool Grind', image: '/media/certificates/cool grind.jpg' },
-                { name: 'High Essential Oils', image: '/media/certificates/high essential oils.jpg' },
-                { name: 'Sterilized', image: '/media/certificates/sterilized.jpg' },
-                { name: 'Zero Preservatives', image: '/media/certificates/zero preservatives.jpg' },
-                { name: 'Zero Salmonella', image: '/media/certificates/zero salmonela.png' },
-                { name: 'ISO Certified', image: '/media/certificates/iso certificate.png' },
-                { name: 'HACCP', image: '/media/certificates/haccp.png' },
-                { name: 'Cool Grind', image: '/media/certificates/cool grind.jpg' },
-                { name: 'High Essential Oils', image: '/media/certificates/high essential oils.jpg' },
-                { name: 'Sterilized', image: '/media/certificates/sterilized.jpg' },
-                { name: 'Zero Preservatives', image: '/media/certificates/zero preservatives.jpg' },
-                { name: 'Zero Salmonella', image: '/media/certificates/zero salmonela.png' },
+                { name: 'FSSAI', image: '/media/auth/fssai.png' },
+                { name: 'HACCP', image: '/media/auth/haccp.png' },
+                { name: 'Halal', image: '/media/auth/halal.png' },
+                { name: 'ISO 9001', image: '/media/auth/iso 9001.webp' },
+                { name: 'Kosher', image: '/media/auth/kosher.jpg' },
+                { name: 'Spice Board of India', image: '/media/auth/spice board of india.jpg' },
+                { name: 'FSSAI', image: '/media/auth/fssai.png' },
+                { name: 'HACCP', image: '/media/auth/haccp.png' },
+                { name: 'Halal', image: '/media/auth/halal.png' },
+                { name: 'ISO 9001', image: '/media/auth/iso 9001.webp' },
+                { name: 'Kosher', image: '/media/auth/kosher.jpg' },
+                { name: 'Spice Board of India', image: '/media/auth/spice board of india.jpg' },
               ].map((cert, idx) => (
                 <div key={idx} className={styles.certCard}>
                   <img src={cert.image} alt={cert.name} className={styles.certImage} />

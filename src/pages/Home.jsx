@@ -87,7 +87,7 @@ const Home = () => {
         <div className="container">
           <div className={styles.sectionHeaderLeft} style={{textAlign: 'center', maxWidth: '900px', margin: '0 auto var(--spacing-xl)'}}>
             <span className={styles.sectionLabel}>QUALITY ASSURANCE</span>
-            <h2 className="serif-heading">Our <span className="text-primary">Certifications</span></h2>
+            <h2 className="serif-heading">State of Art <span className="text-primary">Manufacturing</span></h2>
             <p>Committed to the highest standards of quality, safety, and purity.</p>
           </div>
           <div className={styles.certTrack}>

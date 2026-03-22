@@ -93,6 +93,40 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Our Certifications Banner */}
+      <section className={`section ${styles.certificatesSection}`}>
+        <div className="container">
+          <div className={styles.sectionHeader}>
+            <span className={styles.label}>QUALITY ASSURANCE</span>
+            <h2 className="serif-heading">Our <span className="text-primary">Certifications</span></h2>
+            <p>Certified for excellence at every step of the process.</p>
+          </div>
+          <div className={styles.certTrack}>
+            <div className={styles.certSlide}>
+              {[
+                { name: 'FSSAI', image: '/media/auth/fssai.png' },
+                { name: 'HACCP', image: '/media/auth/haccp.png' },
+                { name: 'Halal', image: '/media/auth/halal.png' },
+                { name: 'ISO 9001', image: '/media/auth/iso 9001.webp' },
+                { name: 'Kosher', image: '/media/auth/kosher.jpg' },
+                { name: 'Spice Board of India', image: '/media/auth/spice board of india.jpg' },
+                { name: 'FSSAI', image: '/media/auth/fssai.png' },
+                { name: 'HACCP', image: '/media/auth/haccp.png' },
+                { name: 'Halal', image: '/media/auth/halal.png' },
+                { name: 'ISO 9001', image: '/media/auth/iso 9001.webp' },
+                { name: 'Kosher', image: '/media/auth/kosher.jpg' },
+                { name: 'Spice Board of India', image: '/media/auth/spice board of india.jpg' },
+              ].map((cert, idx) => (
+                <div key={idx} className={styles.certCard}>
+                  <img src={cert.image} alt={cert.name} className={styles.certImage} />
+                  <span className={styles.certName}>{cert.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

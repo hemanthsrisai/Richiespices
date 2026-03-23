@@ -33,8 +33,8 @@ const ALL_PRODUCTS = [
   
   // Oleoresins & Oils
   { id: 16, name: 'Cumin Oil', category: 'Oleoresins & Oils', desc: 'Pure extracted cumin essential oil.', packSizes: ['100ml', '500ml', '1L', 'Bulk Drums'], image: '/media/cumin olis.png' },
-  { id: 17, name: 'Cardamom Oil', category: 'Oleoresins & Oils', desc: 'Premium cardamom essential oil with rich aroma.', packSizes: ['100ml', '500ml', '1L', 'Bulk Drums'], image: '/media/products/Choti Elaichi.jpg' },
-  { id: 23, name: 'Black Pepper Oil', category: 'Oleoresins & Oils', desc: 'Pure black pepper oleoresin extract.', packSizes: ['100ml', '500ml', '1L', 'Bulk Drums'], image: '/media/products/Black Pepper.jpg' },
+  { id: 17, name: 'Cardamom Oil', category: 'Oleoresins & Oils', desc: 'Premium cardamom essential oil with rich aroma.', packSizes: ['100ml', '500ml', '1L', 'Bulk Drums'], image: '/media/products/cardamon oil.png' },
+  { id: 23, name: 'Black Pepper Oil', category: 'Oleoresins & Oils', desc: 'Pure black pepper oleoresin extract.', packSizes: ['100ml', '500ml', '1L', 'Bulk Drums'], image: '/media/products/black pepper oil.png' },
 ];
 
 const CATEGORIES = ['All', 'Whole Spices', 'Powder Spices', 'Blended Spices', 'Oleoresins & Oils'];

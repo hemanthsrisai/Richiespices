@@ -32,6 +32,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line react-compiler/react-compiler
     setIsMobileMenuOpen(false);
   }, [location]);
 

@@ -1,3 +1,4 @@
+/* eslint-env node */
 export default async function handler(request, response) {
   // Only allow POST requests
   if (request.method !== 'POST') {

@@ -44,14 +44,30 @@ const B2B = () => {
         <div className="container">
           <div className={styles.sectionHeaderSplit}>
             <div className={styles.sectionHeaderLeft}>
-              <h2 className="serif-heading">Industries We Serve</h2>
+              <h2 className={`serif-heading ${styles.highlightedHeading}`}>
+                Industries We <span className="text-primary">Serve</span>
+              </h2>
               <p>Tailored packaging and product specifications for diverse business needs.</p>
             </div>
-            <div className={styles.showcaseImages}>
-              <div className={styles.showcaseTrack}>
-                <img src="/media/products/Choti Elaichi.jpg" alt="Green Cardamom" className={styles.showcaseImg} />
-                <img src="/media/products/Black Pepper.jpg" alt="Black Pepper" className={styles.showcaseImg} />
-                <img src="/media/products/Jeera.jpg" alt="Cumin Seeds" className={styles.showcaseImg} />
+            <div className={styles.packagingShowcase}>
+              <div className={styles.packagingContent}>
+                <span className={styles.packagingLabel}>AVAILABLE IN B2B SIZES</span>
+                <div className={styles.animatedTextWrapper}>
+                  Convenient Packaging Sizes:<br/>
+                  <span className={styles.animatedSizes}>
+                    <span className={styles.sizeItem}>25gm</span>
+                    <span className={styles.dot}>•</span>
+                    <span className={styles.sizeItem}>50gm</span>
+                    <span className={styles.dot}>•</span>
+                    <span className={styles.sizeItem}>100gm</span>
+                    <span className={styles.dot}>•</span><br/>
+                    <span className={styles.sizeItem}>250gm</span>
+                    <span className={styles.dot}>•</span>
+                    <span className={styles.sizeItem}>Half Kg</span>
+                    <span className={styles.dot}>•</span>
+                    <span className={styles.sizeItem}>1 Kg</span>
+                  </span>
+                </div>
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { ArrowRight, Leaf, Package, Globe } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Package, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
 

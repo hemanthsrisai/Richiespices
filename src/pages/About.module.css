@@ -44,53 +44,124 @@
   font-weight: 500;
 }
 
-.mainImageWrapper {
-  position: relative;
+/* Our Team Section */
+.teamSection {
   width: 100%;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  margin-top: var(--spacing-md);
 }
 
-.mainImage {
-  width: 100%;
-  height: auto;
-  min-height: 400px;
-  max-height: 600px;
-  object-fit: cover;
-  display: block;
-}
-
-.experienceBadge {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  background-color: var(--color-cream);
-  padding: var(--spacing-lg);
-  border-radius: 0 var(--radius-md) 0 0; /* Curve the top right */
-  box-shadow: 5px -5px 15px rgba(0,0,0,0.05);
+.teamHeading {
+  font-size: 2.5rem !important;
+  margin-bottom: var(--spacing-xl) !important;
   text-align: center;
-  z-index: 2;
-  min-width: 180px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
 }
 
-.badgeNum {
+.teamHeading::after {
+  content: '';
   display: block;
-  font-family: var(--font-heading-primary);
-  font-size: 3.5rem;
-  color: var(--color-primary);
-  line-height: 1;
+  width: 60px;
+  height: 4px;
+  background: var(--color-saffron);
+  border-radius: 2px;
+  margin: var(--spacing-sm) auto 0;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .teamGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.teamCard {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+  text-align: center;
+}
+
+.teamCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.teamImgWrapper {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, var(--color-cream) 0%, #f5ebe0 100%);
+}
+
+.teamImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s ease;
+}
+
+.teamCard:hover .teamImg {
+  transform: scale(1.05);
+}
+
+.teamInfo {
+  padding: var(--spacing-lg);
+}
+
+.teamName {
+  font-family: var(--font-heading-serif);
+  font-size: 1.3rem;
+  color: var(--color-primary-dark);
   margin-bottom: 4px;
 }
 
-.badgeText {
-  display: block;
+.teamRole {
+  display: inline-block;
+  background: var(--color-cream);
+  color: var(--color-primary);
   font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--color-text-muted);
+  font-weight: 700;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  padding: 4px 12px;
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--spacing-sm);
+}
+
+.teamBio {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+.linkedinBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #0a66c2;
+  color: var(--color-white);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: var(--radius-xl);
+  text-decoration: none;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.linkedinBtn:hover {
+  background: #004182;
+  transform: translateY(-2px);
 }
 
 /* Vision & Mission */

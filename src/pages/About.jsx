@@ -1,5 +1,5 @@
 import PageHeader from '../components/layout/PageHeader';
-import { Target, Eye, ShieldCheck, Factory } from 'lucide-react';
+import { Target, Eye, ShieldCheck, Factory, Linkedin } from 'lucide-react';
 import styles from './About.module.css';
 
 const About = () => {
@@ -27,15 +27,48 @@ const About = () => {
               Backed by modern processing facilities, strict food safety protocols, and an uncompromising dedication to quality, Richie Spices is rapidly becoming a trusted name in households and commercial kitchens globally.
             </p>
           </div>
-          <div className={styles.mainImageWrapper}>
-            <img 
-              src="/media/mainrich.png" 
-              alt="Richie Spices Main Facility" 
-              className={styles.mainImage}
-            />
-            <div className={styles.experienceBadge}>
-              <span className={styles.badgeNum}>100%</span>
-              <span className={styles.badgeText}>PURE & NATURAL</span>
+          <div className={styles.teamSection}>
+            <h2 className={`serif-heading ${styles.teamHeading}`}>Our <span className="text-primary">Team</span></h2>
+            <div className={styles.teamGrid}>
+              <div className={styles.teamCard}>
+                <div className={styles.teamImgWrapper}>
+                  <img src="/media/team/ayush.jpeg" alt="Ayush Jaiswal" className={styles.teamImg} />
+                </div>
+                <div className={styles.teamInfo}>
+                  <h3 className={styles.teamName}>Ayush Jaiswal</h3>
+                  <span className={styles.teamRole}>Chief Executive Officer</span>
+                  <p className={styles.teamBio}>CEO of Richie Spices, leading the company's vision of transforming the spices industry into a structured, quality-driven FMCG business. Previously worked with ITC Limited. MBA from IIM Indore and B.A. Economics from SRCC, University of Delhi.</p>
+                  <a href="https://www.linkedin.com/in/jaiswalayush/" target="_blank" rel="noopener noreferrer" className={styles.linkedinBtn}>
+                    <Linkedin size={16} /> LinkedIn
+                  </a>
+                </div>
+              </div>
+              <div className={styles.teamCard}>
+                <div className={styles.teamImgWrapper}>
+                  <img src="/media/team/piyush.jpeg" alt="Piyush Jaiswal" className={styles.teamImg} />
+                </div>
+                <div className={styles.teamInfo}>
+                  <h3 className={styles.teamName}>Piyush Jaiswal</h3>
+                  <span className={styles.teamRole}>Chief Operating Officer</span>
+                  <p className={styles.teamBio}>COO managing end-to-end operations, driving General Trade networks, and expanding distribution channels. Previously at American Express. MBA from Delhi School of Business and B.Com (Hons) from Keshav Mahavidyalaya, University of Delhi.</p>
+                  <a href="https://www.linkedin.com/in/piyush-jaiswal-754743138/" target="_blank" rel="noopener noreferrer" className={styles.linkedinBtn}>
+                    <Linkedin size={16} /> LinkedIn
+                  </a>
+                </div>
+              </div>
+              <div className={styles.teamCard}>
+                <div className={styles.teamImgWrapper}>
+                  <img src="/media/team/pratiyush.jpeg" alt="Pratiyush Jaiswal" className={styles.teamImg} />
+                </div>
+                <div className={styles.teamInfo}>
+                  <h3 className={styles.teamName}>Pratiyush Jaiswal</h3>
+                  <span className={styles.teamRole}>Head of B2B & Growth</span>
+                  <p className={styles.teamBio}>Leads B2B expansion and strategic growth across general trade, modern retail, and institutional channels. Previously at Shree Cement in logistics. MBA from Great Lakes, Chennai with exchange at IÉSEG, Paris. BBA from Amity University.</p>
+                  <a href="https://www.linkedin.com/in/pratiyush-jaiswal-2a2319212/" target="_blank" rel="noopener noreferrer" className={styles.linkedinBtn}>
+                    <Linkedin size={16} /> LinkedIn
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

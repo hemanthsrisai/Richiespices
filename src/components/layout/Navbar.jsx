@@ -14,7 +14,6 @@ const Navbar = () => {
     { name: 'PRODUCTS', path: '/products' },
     { name: 'B2B', path: '/b2b' },
     { name: 'B2B2C', path: '/b2b2c' },
-    { name: 'GALLERY', path: '/gallery' },
     { name: 'CONTACT US', path: '/contact' },
   ];
 

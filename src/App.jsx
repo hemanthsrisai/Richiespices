@@ -9,7 +9,6 @@ import About from './pages/About';
 import Products from './pages/Products';
 import B2B from './pages/B2B';
 import B2B2C from './pages/B2B2C';
-import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 
 import './App.css';
@@ -27,7 +26,6 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/b2b" element={<B2B />} />
             <Route path="/b2b2c" element={<B2B2C />} />
-            <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

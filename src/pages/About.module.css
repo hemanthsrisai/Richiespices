@@ -61,7 +61,7 @@
 .teamHeading::after {
   content: '';
   display: block;
-  width: 60px;
+  width: 100%;
   height: 4px;
   background: var(--color-saffron);
   border-radius: 2px;
@@ -85,13 +85,16 @@
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-md);
-  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium), border-color var(--transition-medium);
   text-align: center;
   border: 1px solid rgba(242, 170, 31, 0.15);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .teamCard:hover {
-  transform: translateY(-8px);
+  transform: translateY(-8px) translateZ(0);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
   border-color: rgba(242, 170, 31, 0.4);
 }
@@ -102,6 +105,9 @@
   overflow: hidden;
   position: relative;
   background: var(--color-primary-dark);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .teamImgWrapper::after {
@@ -111,6 +117,7 @@
   background: linear-gradient(to top, var(--color-primary-dark) 0%, transparent 40%);
   opacity: 0.3;
   transition: opacity 0.5s ease;
+  pointer-events: none;
 }
 
 .teamCard:hover .teamImgWrapper::after {
@@ -123,6 +130,9 @@
   object-fit: cover;
   object-position: top center;
   transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .teamCard:hover .teamImg {

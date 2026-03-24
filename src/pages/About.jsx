@@ -15,8 +15,8 @@ const About = () => {
       <section className="section bg-paper">
         <div className={`container ${styles.companyContainer}`}>
           <div className={styles.companyContent}>
-            <span className={styles.label}>OUR STORY</span>
-            <h2 className="serif-heading">Roots in Tradition.<br/>A Future in <span className="text-primary">Flavor.</span></h2>
+            <h2 className="serif-heading" style={{ fontSize: '2.5rem', marginBottom: '0.5rem', color: 'var(--color-saffron)' }}>Our Story</h2>
+            <h3 className="serif-heading" style={{ fontSize: '1.8rem', color: 'var(--color-primary-dark)' }}>Roots in Tradition.<br/>A Future in <span className="text-primary">Flavor.</span></h3>
             <p>
               Founded in 2000 in the bustling commercial hub of Wazirpur Industrial Area, Delhi, India, <strong>Richie Spices Company</strong> emerged with a singular goal: to deliver the unadulterated, authentic taste of Indian spices to the world.
             </p>

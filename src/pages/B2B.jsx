@@ -1,9 +1,26 @@
+import { useState, useEffect } from 'react';
 import PageHeader from '../components/layout/PageHeader';
 import { Building2, ChefHat, ShoppingCart, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import styles from './B2B.module.css';
 
+const PACKAGING_SIZES = ['25gm', '50gm', '100gm', '250gm', 'Half Kg', '1 Kg'];
+
 const B2B = () => {
+  const [currentSize, setCurrentSize] = useState(0);
+  const [isSlideOut, setIsSlideOut] = useState(false);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIsSlideOut(true);
+      setTimeout(() => {
+        setCurrentSize((prev) => (prev + 1) % PACKAGING_SIZES.length);
+        setIsSlideOut(false);
+      }, 500);
+    }, 2500);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className={styles.b2bPage}>
       <PageHeader 
@@ -53,20 +70,12 @@ const B2B = () => {
               <div className={styles.packagingContent}>
                 <span className={styles.packagingLabel}>AVAILABLE IN B2B SIZES</span>
                 <div className={styles.animatedTextWrapper}>
-                  Convenient Packaging Sizes:<br/>
-                  <span className={styles.animatedSizes}>
-                    <span className={styles.sizeItem}>25gm</span>
-                    <span className={styles.dot}>•</span>
-                    <span className={styles.sizeItem}>50gm</span>
-                    <span className={styles.dot}>•</span>
-                    <span className={styles.sizeItem}>100gm</span>
-                    <span className={styles.dot}>•</span><br/>
-                    <span className={styles.sizeItem}>250gm</span>
-                    <span className={styles.dot}>•</span>
-                    <span className={styles.sizeItem}>Half Kg</span>
-                    <span className={styles.dot}>•</span>
-                    <span className={styles.sizeItem}>1 Kg</span>
-                  </span>
+                  Available in:
+                  <div className={styles.sliderContainer}>
+                    <span className={`${styles.sliderItem} ${isSlideOut ? styles.slideOut : styles.slideIn}`}>
+                      {PACKAGING_SIZES[currentSize]}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

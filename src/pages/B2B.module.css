@@ -103,15 +103,69 @@
 }
 
 /* Industries */
-.sectionHeader {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto var(--spacing-xl);
+.sectionHeaderSplit {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
 }
 
-.sectionHeader h2 {
-  font-size: 2.25rem;
+@media (min-width: 768px) {
+  .sectionHeaderSplit {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.sectionHeaderLeft h2 {
+  font-size: 2.5rem;
   margin-bottom: var(--spacing-sm);
+  color: var(--color-primary-dark);
+}
+
+.sectionHeaderLeft p {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.showcaseImages {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.showcaseTrack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.showcaseImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  animation: showcaseFade 9s infinite;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-md);
+}
+
+.showcaseImg:nth-child(1) { animation-delay: 0s; }
+.showcaseImg:nth-child(2) { animation-delay: 3s; }
+.showcaseImg:nth-child(3) { animation-delay: 6s; }
+
+@keyframes showcaseFade {
+  0%   { opacity: 0; transform: scale(0.95); }
+  5%   { opacity: 1; transform: scale(1); }
+  30%  { opacity: 1; transform: scale(1); }
+  35%  { opacity: 0; transform: scale(1.02); }
+  100% { opacity: 0; }
 }
 
 .industryGrid {
@@ -128,7 +182,7 @@
 
 @media (min-width: 1024px) {
   .industryGrid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

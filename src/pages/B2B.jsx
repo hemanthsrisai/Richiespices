@@ -42,9 +42,18 @@ const B2B = () => {
       {/* Target Industries */}
       <section className="section bg-paper">
         <div className="container">
-          <div className={styles.sectionHeader}>
-            <h2 className="serif-heading">Industries We Serve</h2>
-            <p>Tailored packaging and product specifications for diverse business needs.</p>
+          <div className={styles.sectionHeaderSplit}>
+            <div className={styles.sectionHeaderLeft}>
+              <h2 className="serif-heading">Industries We Serve</h2>
+              <p>Tailored packaging and product specifications for diverse business needs.</p>
+            </div>
+            <div className={styles.showcaseImages}>
+              <div className={styles.showcaseTrack}>
+                <img src="/media/products/Choti Elaichi.jpg" alt="Green Cardamom" className={styles.showcaseImg} />
+                <img src="/media/products/Black Pepper.jpg" alt="Black Pepper" className={styles.showcaseImg} />
+                <img src="/media/products/Jeera.jpg" alt="Cumin Seeds" className={styles.showcaseImg} />
+              </div>
+            </div>
           </div>
 
           <div className={styles.industryGrid}>

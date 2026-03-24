@@ -153,11 +153,10 @@
   border-left: 4px solid var(--color-saffron);
   position: relative;
   overflow: hidden;
-  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 250px;
+  min-height: 180px;
 }
 
 .packagingShowcase::before {
@@ -171,69 +170,53 @@
   pointer-events: none;
 }
 
-.packagingLabel {
-  display: inline-block;
-  background: var(--color-primary-dark);
-  color: var(--color-white);
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-  padding: 6px 16px;
-  border-radius: var(--radius-xl);
-  margin-bottom: var(--spacing-md);
+.packagingHeading {
+  font-size: 1.6rem;
+  color: var(--color-primary-dark);
   font-weight: 700;
-  animation: pulseBadge 3s infinite alternate;
-}
-
-@keyframes pulseBadge {
-  0% { box-shadow: 0 0 0 0 rgba(242, 170, 31, 0.4); }
-  100% { box-shadow: 0 0 0 10px rgba(242, 170, 31, 0); }
-}
-
-.animatedTextWrapper {
-  font-size: 1.3rem;
-  color: var(--color-text-dark);
-  font-weight: 500;
-  line-height: 1.8;
+  margin-bottom: var(--spacing-sm);
+  font-family: var(--font-heading-serif);
 }
 
 .sliderContainer {
   display: block;
-  height: 3.5rem;
-  margin-top: var(--spacing-sm);
+  height: 4.5rem;
   position: relative;
   overflow: hidden;
   width: 100%;
 }
 
 .sliderItem {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   font-family: var(--font-heading-serif);
-  font-size: 2.5rem;
-  color: var(--color-primary);
-  font-weight: 700;
+  font-size: 3.5rem;
+  color: var(--color-saffron);
+  font-weight: 800;
   position: absolute;
   left: 0;
   right: 0;
-  text-align: center;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-shadow: 0 4px 12px rgba(242, 170, 31, 0.3);
 }
 
 .slideIn {
-  animation: slideInFromRight 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation: slideInFromRight 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .slideOut {
-  animation: slideOutToLeft 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation: slideOutToLeft 0.5s cubic-bezier(0.36, 0, 0.66, -0.56) forwards;
 }
 
 @keyframes slideInFromRight {
-  0% { transform: translateX(100%); opacity: 0; }
-  100% { transform: translateX(0); opacity: 1; }
+  0% { transform: translateX(50%) scale(0.8); opacity: 0; }
+  100% { transform: translateX(0) scale(1); opacity: 1; }
 }
 
 @keyframes slideOutToLeft {
-  0% { transform: translateX(0); opacity: 1; }
-  100% { transform: translateX(-100%); opacity: 0; }
+  0% { transform: translateX(0) scale(1.1); opacity: 1; }
+  100% { transform: translateX(-50%) scale(0.5); opacity: 0; }
 }
 
 .industryGrid {

@@ -68,14 +68,11 @@ const B2B = () => {
             </div>
             <div className={styles.packagingShowcase}>
               <div className={styles.packagingContent}>
-                <span className={styles.packagingLabel}>AVAILABLE IN B2B SIZES</span>
-                <div className={styles.animatedTextWrapper}>
-                  Available in:
-                  <div className={styles.sliderContainer}>
-                    <span className={`${styles.sliderItem} ${isSlideOut ? styles.slideOut : styles.slideIn}`}>
-                      {PACKAGING_SIZES[currentSize]}
-                    </span>
-                  </div>
+                <h3 className={styles.packagingHeading}>Available in convenient packaging and sizes</h3>
+                <div className={styles.sliderContainer}>
+                  <span className={`${styles.sliderItem} ${isSlideOut ? styles.slideOut : styles.slideIn}`}>
+                    {PACKAGING_SIZES[currentSize]}
+                  </span>
                 </div>
               </div>
             </div>

@@ -47,15 +47,14 @@
 /* Our Team Section */
 .teamSection {
   width: 100%;
+  text-align: center;
 }
 
 .teamHeading {
   font-size: 2.5rem !important;
   margin-bottom: var(--spacing-xl) !important;
-  text-align: center;
   position: relative;
   display: inline-block;
-  width: 100%;
 }
 
 .teamHeading::after {
@@ -105,6 +104,8 @@
   overflow: hidden;
   position: relative;
   background: var(--color-primary-dark);
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform: translateZ(0);

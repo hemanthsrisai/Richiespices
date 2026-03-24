@@ -1,8 +1,36 @@
+import { useState, useEffect } from 'react';
 import { ArrowRight, CheckCircle2, Package, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
+const SHOWCASE_PRODUCTS = [
+  { name: 'Green Cardamom', image: '/media/products/Choti Elaichi.jpg' },
+  { name: 'Black Pepper', image: '/media/products/Black Pepper.jpg' },
+  { name: 'Cumin Seeds', image: '/media/products/Jeera.jpg' },
+  { name: 'Cloves', image: '/media/products/Laung.jpg' },
+  { name: 'Turmeric Powder', image: '/media/products/Haldi Powder.jpeg' },
+  { name: 'Red Chilli Powder', image: '/media/products/Red Mirch Powder.jpeg' },
+  { name: 'Garam Masala', image: '/media/products/Garam Masala.jpg' },
+  { name: 'Biryani Masala', image: '/media/products/Biryani Masala.png' },
+  { name: 'Chicken Masala', image: '/media/products/Chicken Masala.png' },
+  { name: 'Fennel Seeds', image: '/media/products/Sauf.jpg' },
+  { name: 'Coriander Powder', image: '/media/products/Dhaniya Powder.jpeg' },
+  { name: 'Cardamom Oil', image: '/media/products/cardamon oil.png' },
+];
 
 const Home = () => {
+  const [currentProduct, setCurrentProduct] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAnimating(false);
+      setTimeout(() => {
+        setCurrentProduct(prev => (prev + 1) % SHOWCASE_PRODUCTS.length);
+        setIsAnimating(true);
+      }, 300);
+    }, 2800);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className={styles.home}>
       {/* Hero Section */}
@@ -74,34 +102,23 @@ const Home = () => {
             <Link to="/about" className="btn btn-primary" style={{marginTop: '1.5rem'}}>READ OUR STORY <ArrowRight size={16} style={{marginLeft: '8px'}} /></Link>
           </div>
           <div className={styles.productShowcase}>
-            <div className={styles.showcaseBadge}>OUR PRODUCTS</div>
-            <div className={styles.scrollRow + ' ' + styles.scrollRowLeft}>
-              {[
-                '/media/products/Choti Elaichi.jpg', '/media/products/Black Pepper.jpg', '/media/products/Jeera.jpg',
-                '/media/products/Laung.jpg', '/media/products/Ajwain.jpg', '/media/products/Sauf.jpg',
-                '/media/products/Sarso.jpg', '/media/products/Methi.jpg',
-                '/media/products/Choti Elaichi.jpg', '/media/products/Black Pepper.jpg', '/media/products/Jeera.jpg',
-                '/media/products/Laung.jpg', '/media/products/Ajwain.jpg', '/media/products/Sauf.jpg',
-                '/media/products/Sarso.jpg', '/media/products/Methi.jpg',
-              ].map((img, i) => <img key={i} src={img} alt="Product" className={styles.scrollImg} />)}
-            </div>
-            <div className={styles.scrollRow + ' ' + styles.scrollRowRight}>
-              {[
-                '/media/products/Haldi Powder.jpeg', '/media/products/Red Mirch Powder.jpeg', '/media/products/Dhaniya Powder.jpeg',
-                '/media/products/Jeera Powder.png', '/media/products/Black pepperPowder.png', '/media/products/Mangraila.jpg',
-                '/media/products/Posta Dana.jpg',
-                '/media/products/Haldi Powder.jpeg', '/media/products/Red Mirch Powder.jpeg', '/media/products/Dhaniya Powder.jpeg',
-                '/media/products/Jeera Powder.png', '/media/products/Black pepperPowder.png', '/media/products/Mangraila.jpg',
-                '/media/products/Posta Dana.jpg',
-              ].map((img, i) => <img key={i} src={img} alt="Product" className={styles.scrollImg} />)}
-            </div>
-            <div className={styles.scrollRow + ' ' + styles.scrollRowLeft + ' ' + styles.scrollRowSlow}>
-              {[
-                '/media/products/Garam Masala.jpg', '/media/products/Biryani Masala.png', '/media/products/Chicken Masala.png',
-                '/media/products/Meat Masala.png', '/media/products/cardamon oil.png', '/media/products/black pepper oil.png',
-                '/media/products/Garam Masala.jpg', '/media/products/Biryani Masala.png', '/media/products/Chicken Masala.png',
-                '/media/products/Meat Masala.png', '/media/products/cardamon oil.png', '/media/products/black pepper oil.png',
-              ].map((img, i) => <img key={i} src={img} alt="Product" className={styles.scrollImg} />)}
+            <div className={styles.showcaseInner}>
+              <div className={`${styles.showcaseProduct} ${isAnimating ? styles.showProduct : ''}`}>
+                <img
+                  src={SHOWCASE_PRODUCTS[currentProduct].image}
+                  alt={SHOWCASE_PRODUCTS[currentProduct].name}
+                  className={styles.showcaseMainImg}
+                />
+              </div>
+              <div className={`${styles.showcaseInfo} ${isAnimating ? styles.showProduct : ''}`}>
+                <span className={styles.showcaseBadge}>OUR PRODUCTS</span>
+                <h3 className={`serif-heading ${styles.showcaseProductName}`}>{SHOWCASE_PRODUCTS[currentProduct].name}</h3>
+                <div className={styles.showcaseCounter}>
+                  <span>{String(currentProduct + 1).padStart(2, '0')}</span>
+                  <div className={styles.progressBar}><div className={styles.progressFill} key={currentProduct} /></div>
+                  <span>{String(SHOWCASE_PRODUCTS.length).padStart(2, '0')}</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

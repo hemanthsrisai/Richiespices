@@ -73,10 +73,35 @@ const Home = () => {
             </p>
             <Link to="/about" className="btn btn-primary" style={{marginTop: '1.5rem'}}>READ OUR STORY <ArrowRight size={16} style={{marginLeft: '8px'}} /></Link>
           </div>
-          <div className={styles.aboutImageWrapper}>
-            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Spice Market or Processing" className={styles.aboutImageCard} />
-            <div className={styles.imageCaption}>
-               Wazirpur Industrial Hub — Delhi, India
+          <div className={styles.productShowcase}>
+            <div className={styles.showcaseBadge}>OUR PRODUCTS</div>
+            <div className={styles.scrollRow + ' ' + styles.scrollRowLeft}>
+              {[
+                '/media/products/Choti Elaichi.jpg', '/media/products/Black Pepper.jpg', '/media/products/Jeera.jpg',
+                '/media/products/Laung.jpg', '/media/products/Ajwain.jpg', '/media/products/Sauf.jpg',
+                '/media/products/Sarso.jpg', '/media/products/Methi.jpg',
+                '/media/products/Choti Elaichi.jpg', '/media/products/Black Pepper.jpg', '/media/products/Jeera.jpg',
+                '/media/products/Laung.jpg', '/media/products/Ajwain.jpg', '/media/products/Sauf.jpg',
+                '/media/products/Sarso.jpg', '/media/products/Methi.jpg',
+              ].map((img, i) => <img key={i} src={img} alt="Product" className={styles.scrollImg} />)}
+            </div>
+            <div className={styles.scrollRow + ' ' + styles.scrollRowRight}>
+              {[
+                '/media/products/Haldi Powder.jpeg', '/media/products/Red Mirch Powder.jpeg', '/media/products/Dhaniya Powder.jpeg',
+                '/media/products/Jeera Powder.png', '/media/products/Black pepperPowder.png', '/media/products/Mangraila.jpg',
+                '/media/products/Posta Dana.jpg',
+                '/media/products/Haldi Powder.jpeg', '/media/products/Red Mirch Powder.jpeg', '/media/products/Dhaniya Powder.jpeg',
+                '/media/products/Jeera Powder.png', '/media/products/Black pepperPowder.png', '/media/products/Mangraila.jpg',
+                '/media/products/Posta Dana.jpg',
+              ].map((img, i) => <img key={i} src={img} alt="Product" className={styles.scrollImg} />)}
+            </div>
+            <div className={styles.scrollRow + ' ' + styles.scrollRowLeft + ' ' + styles.scrollRowSlow}>
+              {[
+                '/media/products/Garam Masala.jpg', '/media/products/Biryani Masala.png', '/media/products/Chicken Masala.png',
+                '/media/products/Meat Masala.png', '/media/products/cardamon oil.png', '/media/products/black pepper oil.png',
+                '/media/products/Garam Masala.jpg', '/media/products/Biryani Masala.png', '/media/products/Chicken Masala.png',
+                '/media/products/Meat Masala.png', '/media/products/cardamon oil.png', '/media/products/black pepper oil.png',
+              ].map((img, i) => <img key={i} src={img} alt="Product" className={styles.scrollImg} />)}
             </div>
           </div>
         </div>

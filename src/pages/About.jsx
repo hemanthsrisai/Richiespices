@@ -37,9 +37,11 @@ const About = () => {
                 <div className={styles.teamInfo}>
                   <h3 className={styles.teamName}>Ayush Jaiswal</h3>
                   <span className={styles.teamRole}>Chief Executive Officer</span>
-                  <p className={styles.teamBio}>Ayush Jaiswal is the CEO of Richie Spices, leading the company's vision of transforming the traditionally unorganized spices industry into a structured, quality-driven FMCG business. He has built systems around sourcing, processing, and distribution, positioning the brand as a reliable and scalable player in the spice industry.</p>
-                  <p className={styles.teamBio}>Ayush has previously worked with ITC Limited, in their FMCG division gaining experience in operations and distribution network.</p>
-                  <p className={styles.teamBio}>He holds an MBA from the Indian Institute of Management, Indore, and bachelor's degree in Economics from Shri Ram College of Commerce (SRCC), University of Delhi. He has also completed a certification in Strategic Management from the London School of Economics, London.</p>
+                  <ul className={styles.teamBioList}>
+                    <li className={styles.teamBio}>Ayush Jaiswal is the CEO of Richie Spices, leading the company's vision of transforming the traditionally unorganized spices industry into a structured, quality-driven FMCG business. He has built systems around sourcing, processing, and distribution, positioning the brand as a reliable and scalable player in the spice industry.</li>
+                    <li className={styles.teamBio}>Ayush has previously worked with ITC Limited, in their FMCG division gaining experience in operations and distribution network.</li>
+                    <li className={styles.teamBio}>He holds an MBA from the Indian Institute of Management, Indore, and bachelor's degree in Economics from Shri Ram College of Commerce (SRCC), University of Delhi. He has also completed a certification in Strategic Management from the London School of Economics, London.</li>
+                  </ul>
                   <a href="https://www.linkedin.com/in/jaiswalayush/" target="_blank" rel="noopener noreferrer" className={styles.linkedinBtn} aria-label="LinkedIn">
                     <Linkedin size={14} />
                   </a>
@@ -52,9 +54,11 @@ const About = () => {
                 <div className={styles.teamInfo}>
                   <h3 className={styles.teamName}>Piyush Jaiswal</h3>
                   <span className={styles.teamRole}>Chief Operating Officer</span>
-                  <p className={styles.teamBio}>Piyush Jaiswal serves as the COO at Richie Spices, he manages end-to-end operations and ensuring smooth execution across the business. He is also actively involved in driving the company's General Trade network, strengthening distribution channels, and building strong relationships with partners to expand market reach.</p>
-                  <p className={styles.teamBio}>Piyush Jaiswal has previously worked with American Express, where he gained valuable exposure to corporate operations, customer management, and financial services.</p>
-                  <p className={styles.teamBio}>Piyush holds an MBA from the Delhi School of Business and a Bachelor of Commerce (Honours) degree from the Keshav Mahavidyalaya, University of Delhi.</p>
+                  <ul className={styles.teamBioList}>
+                    <li className={styles.teamBio}>Piyush Jaiswal serves as the COO at Richie Spices, he manages end-to-end operations and ensuring smooth execution across the business. He is also actively involved in driving the company's General Trade network, strengthening distribution channels, and building strong relationships with partners to expand market reach.</li>
+                    <li className={styles.teamBio}>Piyush Jaiswal has previously worked with American Express, where he gained valuable exposure to corporate operations, customer management, and financial services.</li>
+                    <li className={styles.teamBio}>Piyush holds an MBA from the Delhi School of Business and a Bachelor of Commerce (Honours) degree from the Keshav Mahavidyalaya, University of Delhi.</li>
+                  </ul>
                   <a href="https://www.linkedin.com/in/piyush-jaiswal-754743138/" target="_blank" rel="noopener noreferrer" className={styles.linkedinBtn} aria-label="LinkedIn">
                     <Linkedin size={14} />
                   </a>
@@ -67,9 +71,11 @@ const About = () => {
                 <div className={styles.teamInfo}>
                   <h3 className={styles.teamName}>Pratiyush Jaiswal</h3>
                   <span className={styles.teamRole}>Head of B2B & Growth</span>
-                  <p className={styles.teamBio}>Pratiyush Jaiswal leads B2B expansion, strategic growth, and overall business operations. With a focus on building a scalable FMCG brand, he focuses on expanding the company's presence across general trade, modern retail, and institutional channels, and expanding into new markets.</p>
-                  <p className={styles.teamBio}>Pratiyush has gained experience in the logistics division at Shree Cement, where he was working in supply chain and operational efficiency.</p>
-                  <p className={styles.teamBio}>He holds an MBA from Great Lakes Institute of Management, Chennai, and completed a part of his MBA through a student exchange program at IÉSEG School of Management, Paris. He also holds a Bachelor of Business Administration (BBA) degree from Amity University, Noida.</p>
+                  <ul className={styles.teamBioList}>
+                    <li className={styles.teamBio}>Pratiyush Jaiswal leads B2B expansion, strategic growth, and overall business operations. With a focus on building a scalable FMCG brand, he focuses on expanding the company's presence across general trade, modern retail, and institutional channels, and expanding into new markets.</li>
+                    <li className={styles.teamBio}>Pratiyush has gained experience in the logistics division at Shree Cement, where he was working in supply chain and operational efficiency.</li>
+                    <li className={styles.teamBio}>He holds an MBA from Great Lakes Institute of Management, Chennai, and completed a part of his MBA through a student exchange program at IÉSEG School of Management, Paris. He also holds a Bachelor of Business Administration (BBA) degree from Amity University, Noida.</li>
+                  </ul>
                   <a href="https://www.linkedin.com/in/pratiyush-jaiswal-2a2319212/" target="_blank" rel="noopener noreferrer" className={styles.linkedinBtn} aria-label="LinkedIn">
                     <Linkedin size={14} />
                   </a>

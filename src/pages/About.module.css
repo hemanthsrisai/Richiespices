@@ -91,11 +91,16 @@
   transform: translateZ(0);
   display: flex;
   flex-direction: column;
+  padding: var(--spacing-xl);
+  gap: var(--spacing-xl);
+  align-items: center;
 }
 
 @media (min-width: 768px) {
   .teamCard {
     flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-2xl);
   }
 }
 
@@ -106,13 +111,13 @@
 }
 
 .teamImgWrapper {
-  width: 100%;
-  height: 300px;
+  width: 220px;
+  height: 220px;
   overflow: hidden;
   position: relative;
   background: var(--color-primary-dark);
-  border-top-left-radius: var(--radius-lg);
-  border-top-right-radius: var(--radius-lg);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(242, 170, 31, 0.3), 0 10px 30px rgba(0,0,0,0.4);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform: translateZ(0);
@@ -121,33 +126,16 @@
 
 @media (min-width: 768px) {
   .teamImgWrapper {
-    width: 280px;
-    height: auto;
-    min-height: 320px;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: var(--radius-lg);
+    width: 260px;
+    height: 260px;
   }
-}
-
-.teamImgWrapper::after {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(to top, var(--color-primary-dark) 0%, transparent 40%);
-  opacity: 0.2;
-  transition: opacity 0.5s ease;
-  pointer-events: none;
-}
-
-.teamCard:hover .teamImgWrapper::after {
-  opacity: 0.5;
 }
 
 .teamImg {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  object-position: left center;
+  object-position: center;
   transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   will-change: transform;
   backface-visibility: hidden;
@@ -159,11 +147,19 @@
 }
 
 .teamInfo {
-  padding: var(--spacing-xl);
-  text-align: left;
+  padding: 0;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .teamInfo {
+    text-align: left;
+    align-items: flex-start;
+  }
 }
 
 .teamName {

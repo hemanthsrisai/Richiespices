@@ -32,9 +32,11 @@
 }
 
 .logo span {
+  display: block;
   font-family: var(--font-heading-serif);
-  font-size: 1.2rem;
+  font-size: 2rem;
   color: var(--color-white);
+  line-height: 1.1;
 }
 
 .desc {

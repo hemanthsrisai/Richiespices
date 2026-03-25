@@ -68,14 +68,14 @@
 }
 
 .teamGrid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
 }
 
 @media (min-width: 768px) {
   .teamGrid {
-    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xl);
   }
 }
 
@@ -85,22 +85,29 @@
   overflow: hidden;
   box-shadow: var(--shadow-md);
   transition: transform var(--transition-medium), box-shadow var(--transition-medium), border-color var(--transition-medium);
-  text-align: center;
   border: 1px solid rgba(242, 170, 31, 0.15);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform: translateZ(0);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .teamCard {
+    flex-direction: row;
+  }
 }
 
 .teamCard:hover {
-  transform: translateY(-8px) translateZ(0);
+  transform: translateY(-4px) translateZ(0);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
   border-color: rgba(242, 170, 31, 0.4);
 }
 
 .teamImgWrapper {
   width: 100%;
-  height: 380px;
+  height: 300px;
   overflow: hidden;
   position: relative;
   background: var(--color-primary-dark);
@@ -109,6 +116,17 @@
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform: translateZ(0);
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .teamImgWrapper {
+    width: 280px;
+    height: auto;
+    min-height: 320px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: var(--radius-lg);
+  }
 }
 
 .teamImgWrapper::after {
@@ -116,13 +134,13 @@
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: linear-gradient(to top, var(--color-primary-dark) 0%, transparent 40%);
-  opacity: 0.3;
+  opacity: 0.2;
   transition: opacity 0.5s ease;
   pointer-events: none;
 }
 
 .teamCard:hover .teamImgWrapper::after {
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .teamImg {
@@ -137,11 +155,15 @@
 }
 
 .teamCard:hover .teamImg {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
 .teamInfo {
-  padding: var(--spacing-lg);
+  padding: var(--spacing-xl);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .teamName {

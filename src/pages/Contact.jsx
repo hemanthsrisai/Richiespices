@@ -31,7 +31,13 @@ const Contact = () => {
       const responseData = await response.json();
 
       if (!response.ok || responseData.error) {
-        throw new Error(responseData.error || 'Failed to send email API error');
+        let errorMsg = 'Failed to send email API error';
+        if (responseData.error) {
+          errorMsg = typeof responseData.error === 'object' 
+            ? (responseData.error.message || JSON.stringify(responseData.error)) 
+            : responseData.error;
+        }
+        throw new Error(errorMsg);
       }
 
       setSubmitStatus('success');

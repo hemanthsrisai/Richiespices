@@ -6,11 +6,13 @@ import styles from './Contact.module.css';
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null); // 'success' or 'error'
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
+    setErrorMessage('');
     
     // Get form data
     const formData = new FormData(e.target);
@@ -29,7 +31,7 @@ const Contact = () => {
       const responseData = await response.json();
 
       if (!response.ok || responseData.error) {
-        throw new Error(responseData.error || 'Failed to send email');
+        throw new Error(responseData.error || 'Failed to send email API error');
       }
 
       setSubmitStatus('success');
@@ -37,6 +39,7 @@ const Contact = () => {
     } catch (error) {
       console.error('Error sending email:', error);
       setSubmitStatus('error');
+      setErrorMessage(error.message || 'Unknown network error');
     } finally {
       setIsSubmitting(false);
     }
@@ -140,7 +143,9 @@ const Contact = () => {
                   )}
                   {submitStatus === 'error' && (
                     <div className={styles.errorMessage} style={{color: 'red', marginTop: '1rem', fontWeight: '500'}}>
-                      Failed to send message. Please ensure you have replaced the Resend API key with your real one, and check console logs.
+                      Failed to send message: {errorMessage}
+                      <br/>
+                      <small>(If this says "API key missing", check Vercel settings. If it says "Method Not Allowed" or "Not Found", check Vercel deployment logs.)</small>
                     </div>
                   )}
                </form>

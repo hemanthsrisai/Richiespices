@@ -32,11 +32,9 @@
 }
 
 .logo span {
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: var(--color-saffron);
-  letter-spacing: 2px;
+  font-family: var(--font-heading-serif);
+  font-size: 1.2rem;
+  color: var(--color-white);
 }
 
 .desc {
